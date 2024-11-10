@@ -32,7 +32,7 @@ Installation
 1. Clone the repository:
 bash
 Copy code
-git clone https://github.com/yourusername/contact-management.git
+git clone https://github.com/JANARTHIKAN/CONTACT_MANAGEMENT.git
 cd contact-management
 2. Setup the Backend
 Navigate to the backend folder:
