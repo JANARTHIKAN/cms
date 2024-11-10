@@ -1,0 +1,141 @@
+/* Login.css */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body, html {
+  height: 100%;
+  font-family: Arial, sans-serif;
+}
+
+/* Background and Container Setup */
+.login-container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-image: url('login_image.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  overflow: hidden;
+}
+
+.login-container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* Low transparency overlay */
+  z-index: 0;
+}
+
+/* Sign-in Box */
+.login-form-container {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  max-width: 400px;
+  padding: 40px;
+  background: rgba(219, 202, 202, 0.8);
+  border-radius: 25px;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.login-form-container:hover {
+  transform: scale(1.05); /* Slightly increase the size */
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.5); /* Enhanced shadow */
+}
+
+
+.login-form-container h2 {
+  font-size: 2em;
+  color: #4267B2;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 10px;
+  font-weight: 500;
+  color: #333;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 10px;
+  font-size: 1.11em;
+  border: 1px solid #ccc;
+  border-radius: 25px;
+  outline: none;
+}
+
+.options {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  font-size: 0.9em;
+  color: #666;
+}
+
+.login-button, .google-login-button {
+  width: 100%;
+  padding: 12px;
+  font-size: em;
+  border-radius: 25px;
+  cursor: pointer;
+  font-weight: bold;
+  border: none;
+  transition: background-color 0.3s ease;
+}
+
+.login-button {
+  background-color: #4267B2;
+  color: #ffffff;
+  margin-bottom: 10px;
+  border-radius: 25px;
+
+}
+
+
+.google-login-button {
+  background-color: #db4437;
+  color: #ffffff;
+  border-radius: 25px;
+
+}
+
+.google-login-button:hover,
+.login-button:hover {
+  opacity: 30;
+}
+
+.signup-link {
+  color: #4267B2;
+  cursor: pointer;
+  text-decoration: underline;
+  margin-left: 20px; /* Adds spacing on the left side of the link */
+}
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .login-form-container {
+    width: 90%;
+    padding: 30px;
+  }
+}
