@@ -64,7 +64,7 @@ const CreateContact = () => {
     try {
       const token = localStorage.getItem('authToken'); // Retrieve token from localStorage
       const response = await axios.post(
-        'http://localhost:5000/api/contacts/addcontacts',
+        'https://contact-manager-server-up3q.onrender.com/api/contacts/addcontacts',
         formData,
         {
           headers: {

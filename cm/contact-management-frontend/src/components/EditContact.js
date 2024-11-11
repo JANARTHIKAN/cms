@@ -28,7 +28,7 @@ const EditContact = () => {
     const fetchContact = async () => {
       const token = localStorage.getItem('authToken');
       try {
-        const response = await axios.get(`http://localhost:5000/api/contacts/getcontact/${id}`, {
+        const response = await axios.get(`https://contact-manager-server-up3q.onrender.com/api/contacts/getcontact/${id}`, {
           headers: {
             Authorization: `Bearer ${token}`,
           },
@@ -76,7 +76,7 @@ const EditContact = () => {
 
     try {
       const token = localStorage.getItem('authToken');
-      await axios.put(`http://localhost:5000/api/contacts/edit/${id}`, formData, {
+      await axios.put(`https://contact-manager-server-up3q.onrender.com/api/contacts/edit/${id}`, formData, {
         headers: {
           'Content-Type': 'multipart/form-data',
           Authorization: `Bearer ${token}`,

@@ -48,7 +48,7 @@ const Contacts = () => {
     try {
       const token = localStorage.getItem('authToken');
       const response = await axios.delete(
-        `http://localhost:5000/api/contacts/delete/${contactToDelete}`,
+        `https://contact-manager-server-up3q.onrender.com/api/contacts/delete/${contactToDelete}`,
         {
           headers: {
             Authorization: `Bearer ${token}`,

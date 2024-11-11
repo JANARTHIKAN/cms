@@ -11,7 +11,7 @@ const Login = () => {
   // Memoize handleGoogleResponse with useCallback
   const handleGoogleResponse = useCallback(async (response) => {
     try {
-      const res = await axios.post('http://localhost:5000/api/google-login', {
+      const res = await axios.post('https://contact-manager-server-up3q.onrender.com/api/google-login', {
         token: response.credential,
       });
 
@@ -44,7 +44,7 @@ const Login = () => {
   const handleLogin = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post('http://localhost:5000/api/login', {
+      const response = await axios.post('https://contact-manager-server-up3q.onrender.com/api/login', {
         email,
         password,
       });
