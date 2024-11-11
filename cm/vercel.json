@@ -1,0 +1,17 @@
+{
+  "builds": [
+    {
+      "src": "contact-management-backend/server.js",  
+      "use": "@vercel/node"  
+    },
+    {
+      "src": "contact-management-frontend/package.json",  
+      "use": "@vercel/static-build",  
+      "config": { "distDir": "frontend/build" }  
+    }
+  ],
+  "routes": [
+    { "src": "/api/(.*)", "dest": "contact-management-backend/server.js" },  
+    { "src": "/(.*)", "dest": "/contact-management-frontend/$1" } 
+  ]
+}
